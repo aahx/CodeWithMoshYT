@@ -7,45 +7,43 @@ public class Part14_MortageCalculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Principal Value
+        // Principal
         System.out.print("Prinicapl: ");
-        float principal = Float.parseFloat(scanner.next());
+        float principal = scanner.nextFloat();
 
         // APR
         System.out.print("Annual Interest Rate: ");
-        float apr = Float.parseFloat(scanner.next());
+        float apr = scanner.nextFloat();
 
-        // Period Years
+        // Years
         System.out.print("Period (Years): ");
-        float mortage = Float.parseFloat(scanner.next());
+        float mortage = scanner.nextFloat();
 
-        // Mortage Calculations
-        String monthlyPaymentsInCurrency = mortageCalculator(principal, apr, mortage);
-        
+        // Mortage Calculator Method
+        String mortgageFormatedCurrency = mortageCalculator(principal, apr, mortage);
+
         // Output - Monthly Payments
-        System.out.println("Mortage: " + monthlyPaymentsInCurrency);
+        System.out.println("Mortgage: " + mortgageFormatedCurrency);
 
         scanner.close();
     }
 
-    public static String mortageCalculator(float loan, float apr, float years) {
-        // p is principal
-        float p = loan;
+    public static String mortageCalculator(float p, float apr, float years) {
+        final byte MONTHS_IN_YEAR = 12;
+        final byte PERCENT = 100;
 
-        // r is monthly interest rate, calculated by dividing your apr by 12 (divided by
-        // 100 to get percent)
-        float r = (apr / 100) / 12;
+        float principal = p;
+        float monthlyInterest = apr / PERCENT / MONTHS_IN_YEAR;
+        int numberOfPayments = (int) years * MONTHS_IN_YEAR;
 
-        // n is number of payments in months
-        int n = (int) years * 12;
-
-        // Monthly payment formula
-        double monthlyPayments = p * ((r * (Math.pow((1 + r), n)))
+        // Mortgage calcualtor (monthly payments)
+        double mortgage = principal * ((monthlyInterest * (Math.pow((1 + monthlyInterest), numberOfPayments)))
                 /
-                (Math.pow((1 + r), n) - 1));
+                (Math.pow((1 + monthlyInterest), numberOfPayments) - 1));
 
-        // Return in Currency
-        String monthlyPaymentsInCurrency = NumberFormat.getCurrencyInstance().format(monthlyPayments);
-        return monthlyPaymentsInCurrency;
+
+        // Return formatted mortgage payment in currency
+        String mortgageFormatted = NumberFormat.getCurrencyInstance().format(mortgage);
+        return mortgageFormatted;
     }
 }
