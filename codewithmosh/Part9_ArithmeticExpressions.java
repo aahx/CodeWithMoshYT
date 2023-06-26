@@ -9,8 +9,7 @@ public class Part9_ArithmeticExpressions {
 
         // System.out.println(result);
         
-        int x = 1;
-        x -=2 ;
+        int x = (10 + 3) * 2;
 
         System.out.println(x);
     }
