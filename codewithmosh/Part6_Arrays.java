@@ -1,8 +1,10 @@
+// Array
+
 package codewithmosh;
 
 import java.util.Arrays;
 
-public class Part6 {
+public class Part6_Arrays {
     public static void main(String[] args) {
         // int[] numbers = new int[5];
         // numbers[0] = 10;

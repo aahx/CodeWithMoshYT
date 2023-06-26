@@ -1,8 +1,9 @@
-package codewithmosh;
-
 // Strings
 
-public class Part4 {
+package codewithmosh;
+
+
+public class Part4_Strings {
     public static void main(String[] args){
         // this package is automatically imported
         // declaration of type and var name

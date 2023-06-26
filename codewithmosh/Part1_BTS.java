@@ -1,6 +1,8 @@
+// How Code Gets Executed
+
 package codewithmosh;
 
-public class Part1 {
+public class Part1_BTS {
     public static void main(String[] args){
         System.out.println("test");
     }

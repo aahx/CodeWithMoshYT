@@ -1,3 +1,5 @@
+// Reference Types
+
 package codewithmosh;
 
 import java.awt.Point;
@@ -11,7 +13,7 @@ import java.awt.Point;
  */
 
 
-public class Part3 {
+public class Part3_ReferenceTypes {
     public static void main(String[] args){
         // memory
         byte x = 1;

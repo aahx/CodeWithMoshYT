@@ -1,8 +1,10 @@
+// PrimitiveTypes
+
 package codewithmosh;
 
 import java.util.Date;
 
-public class Part2 {
+public class Part2_PrimitiveTypes {
     public static void main(String[] args) {
         // // declaring - type of variable and name
         // // initiating/ instantiating 

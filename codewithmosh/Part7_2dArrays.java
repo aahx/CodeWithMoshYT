@@ -1,8 +1,10 @@
+// Multi-Dimensional Array
+
 package codewithmosh;
 
 import java.util.Arrays;
 
-public class Part7 {
+public class Part7_2dArrays {
     public static void main(String[] args) {
         // // 2 row and 3 columns
         // int[][] numbers = new int[2][3];

@@ -1,6 +1,8 @@
+// String Escape Sequences
+
 package codewithmosh;
 
-public class Part5 {
+public class Part5_EscapeSequence {
     public static void main(String[] args) {
         // "\to exit"
         String message = "Hello \"Michael\"";
